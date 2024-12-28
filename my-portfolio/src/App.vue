@@ -1,6 +1,16 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import Sidebar from './components/Sidebar.vue'
+import { RouterLink, RouterView, useRoute } from 'vue-router';
+import Sidebar from './components/Sidebar.vue';
+
+const route = useRoute();
+
+// Extract the dynamic role base path (e.g., "/b" or "/ds")
+import { computed } from 'vue';
+
+const basePath = computed(() => {
+  const pathSegment = route.path.split('/')[1];
+  return ['b', 'f', 'de', 'ds'].includes(pathSegment) ? `/${pathSegment}` : '/b';
+});
 </script>
 
 <template>
@@ -8,11 +18,12 @@ import Sidebar from './components/Sidebar.vue'
     <Sidebar class="sidebar" />
     <div class="main-content">
       <nav class="topbar">
-        <RouterLink to="/">About Me</RouterLink>
-        <RouterLink to="/projects">Projects</RouterLink>
-        <RouterLink to="/resume">Resume</RouterLink>
-        <RouterLink to="/contact">Contact</RouterLink>
+        <!-- Use dynamic basePath for navigation -->
+        <RouterLink :to="basePath">About Me</RouterLink>
+        <RouterLink :to="`${basePath}/projects`">Projects</RouterLink>
+        <RouterLink :to="`${basePath}/contact`">Contact</RouterLink>
       </nav>
+      
       <div class="content">
         <RouterView />
       </div>
@@ -21,39 +32,36 @@ import Sidebar from './components/Sidebar.vue'
 </template>
 
 <style scoped>
-  .sidebar {
-    position: fixed;
-    top: 0px; /* Adjust based on topbar height */
-    left: 0;
-    width: 300px;
-    padding: 1rem;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-  }
-  
-  .content {
-    justify-content: center;
-    margin: 80px 0 0 220px; /* Adjust based on topbar and sidebar width */
-    padding: 1rem;
-  }
-
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.main-content {
+  position: fixed;
+  top: 80px;
+  left: 300px;
+  right: 0;
+  bottom: 0;
+  width: calc(100% - 200px);
+  overflow-y: auto;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  background-color: var(--color-background);
 }
 
 .topbar {
   width: 100%;
-  font-size: 12px;
-  text-align: center; /* Center items */
-  margin-top: 2rem;
+  font-size: 18px;
+  text-align: center;
+  margin: 2rem auto 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -79,38 +87,14 @@ header {
 }
 
 @media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .topbar {
-    text-align: center; /* Center items */
-    margin-left: 0;
-    font-size: 1rem;
-    padding: 1rem 0;
-    margin-top: 0;
-  }
-
   .sidebar {
-    top: 80px; /* Adjust based on topbar height */
-    height: calc(100vh - 80px); /* Adjust based on topbar height */
-    align-items: center; /* Center content horizontally */
+    top: 80px;
+    height: calc(100vh - 80px);
+    align-items: center;
   }
 
   .content {
-    margin: 100px 0 0 220px; /* Adjust based on topbar and sidebar width */
+    margin: 0px 0 0 00px;
   }
 }
 </style>
