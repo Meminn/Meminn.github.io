@@ -3,7 +3,7 @@ import { ref } from 'vue';
 
 const projects = ref([
   {
-    title: 'Project One',
+    title: 'Vinylbox',
     description: 'Description for project one.',
     technologies: ['Vue', 'JavaScript', 'CSS']
   },
