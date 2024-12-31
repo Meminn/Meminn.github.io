@@ -1,31 +1,58 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import Contact from '../views/Contact.vue';
+import About from '../views/AboutMe.vue';
+import Projects from '../views/Projects.vue';
 
-// Backend Engineer Views
-import BackendAbout from '../views/backend/AboutMe.vue';
-import BackendProjects from '../views/backend/Projects.vue';
-
-
-// Data Scientist Views
-import DSAbout from '../views/data-scientist/AboutMe.vue';
-import DSProjects from '../views/data-scientist/Projects.vue';
 
 const routes = [
   {
-    path: '/b',
+    path: '/ds',
     children: [
-      { path: '', name: 'backend-about', component: BackendAbout },
-      { path: 'projects', name: 'backend-projects', component: BackendProjects },
-      { path: 'contact', name: 'backend-contact', component: Contact },
+      { path: '', name: 'ds-about', component: About },
+      { path: 'projects', name: 'ds-projects', component: Projects },
+      { path: 'contact', name: 'ds-contact', component: Contact },
     ],
   },
   {
-    path: '/ds',
+    path: '/b',
     children: [
-      { path: '', name: 'ds-about', component: DSAbout },
-      { path: 'projects', name: 'ds-projects', component: DSProjects },
-      { path: 'contact', name: 'ds-contact', component: Contact },
+      { path: '', name: 'backend-about', component: About },
+      { path: 'projects', name: 'backend-projects', component: Projects },
+      { path: 'contact', name: 'backend-contact', component: Contact },
+    ],
+  },
+  
+  {
+    path: '/de',
+    children: [
+      { path: '', name: 'de-about', component: About },
+      { path: 'projects', name: 'de-projects', component: Projects },
+      { path: 'contact', name: 'de-contact', component: Contact },
+    ],
+  },
+  {
+    path: '/fs',
+    children: [
+      { path: '', name: 'fs-about', component: About },
+      { path: 'projects', name: 'fs-projects', component: Projects },
+      { path: 'contact', name: 'fs-contact', component: Contact },
+    ],
+  },
+  {
+    path: '/fe',
+    children: [
+      { path: '', name: 'fe-about', component: About },
+      { path: 'projects', name: 'fe-projects', component: Projects },
+      { path: 'contact', name: 'fe-contact', component: Contact },
+    ],
+  },
+  {
+    path: '/a',
+    children: [
+      { path: '', name: 'a-about', component: About },
+      { path: 'projects', name: 'a-projects', component: Projects },
+      { path: 'contact', name: 'a-contact', component: Contact },
     ],
   },
 ];

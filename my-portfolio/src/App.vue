@@ -9,7 +9,7 @@ import { computed } from 'vue';
 
 const basePath = computed(() => {
   const pathSegment = route.path.split('/')[1];
-  return ['b', 'f', 'de', 'ds'].includes(pathSegment) ? `/${pathSegment}` : '/b';
+  return pathSegment ? (['ds', 'b', 'f', 'de', 'fs'].includes(pathSegment) ? `/${pathSegment}` : '/ds') : '/ds';
 });
 </script>
 
@@ -32,10 +32,10 @@ const basePath = computed(() => {
 </template>
 
 <style scoped>
-.main-content {
-  position: fixed;
-  top: 80px;
-  left: 300px;
+.main-content, .content {
+  position: absolute;
+  top: 0;
+  left: 200px;
   right: 0;
   bottom: 0;
   width: calc(100% - 200px);
@@ -43,29 +43,33 @@ const basePath = computed(() => {
 }
 
 .sidebar {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 10px;
   left: 0;
-  width: 300px;
   height: 100vh;
-  padding: 1rem;
-  overflow-y: auto;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1000;
-  background-color: var(--color-background);
+  z-index: 100;
+  background-color: var(--vt-c-black-soft);
 }
 
 .topbar {
   width: 100%;
   font-size: 18px;
+  height: 75px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   text-align: center;
-  margin: 2rem auto 0;
+  margin: 0 auto;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  right: 0;
+  background-color: var(--vt-c-black);
+  z-index: 10;
 }
 
 .topbar a.router-link-exact-active {
@@ -79,7 +83,7 @@ const basePath = computed(() => {
 .topbar a {
   display: inline-block;
   padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-text);
 }
 
 .topbar a:first-of-type {
@@ -88,13 +92,15 @@ const basePath = computed(() => {
 
 @media (min-width: 1024px) {
   .sidebar {
-    top: 80px;
-    height: calc(100vh - 80px);
+    top: 0px;
     align-items: center;
   }
 
-  .content {
-    margin: 0px 0 0 00px;
+  .main-content{
+    top: 75px;
+    left: 200px;
+    right: 0;
+    bottom: 0;
   }
 }
 </style>

@@ -16,6 +16,10 @@
 <script>
 import emailjs from 'emailjs-com';
 
+const USER_ID = import.meta.env.VITE_EMAILJS_USER_ID;
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+
 export default {
   data() {
     return {
@@ -28,15 +32,30 @@ export default {
         subject: this.form.subject,
         email: this.form.email,
         message: this.form.message,
-        to_email: 'meminbayrak@gmail.com'
+        to_email: 'meminbayrak55@gmail.com'
       };
-      emailjs.send('service_id', 'template_id', templateParams, 'user_id')
-        .then(response => alert('Message Sent!'))
-        .catch(error => alert('Failed to send message.'));
-    },
-  },
+
+      emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        templateParams,
+        USER_ID
+      )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Email sent successfully!');
+        this.form.subject = '';
+        this.form.email = '';
+        this.form.message = '';
+      }, (error) => {
+        console.log('FAILED...', error);
+        alert('Failed to send email. Please try again later.');
+      });
+    }
+  }
 };
 </script>
+
 
 <style scoped>
 .contact-form {
