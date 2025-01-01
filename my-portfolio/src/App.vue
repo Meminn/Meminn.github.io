@@ -15,7 +15,7 @@ const basePath = computed(() => {
 
 <template>
   <div class="layout">
-    <Sidebar class="sidebar" />
+    <Sidebar class="sidebar" :base-path="basePath" />
     <div class="main-content">
       <nav class="topbar">
         <!-- Use dynamic basePath for navigation -->

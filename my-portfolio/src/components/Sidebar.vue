@@ -3,6 +3,15 @@
     <img :src="profilePhoto" alt="Profile Photo" class="photo"/>
     <h1>{{ name }}</h1>
     <h2>{{ role }}</h2>
+    <div v-if="basePath === '/ds'">
+      <!-- Dynamic content for /ds -->
+      <p>DATA SCIENTIST</p>
+    </div>
+    <div v-else-if="basePath === '/b'">
+      <!-- Dynamic content for /b -->
+      <p>BACKEND ENGINEER</p>
+
+    </div>
     <div class="contact-info">
       <h2>Contact Info</h2>
       <p><font-awesome-icon icon="phone" /> (+90) 505 720 81 34</p>
