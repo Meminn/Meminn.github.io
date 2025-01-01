@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 import Contact from '../views/Contact.vue';
 import About from '../views/AboutMe.vue';
