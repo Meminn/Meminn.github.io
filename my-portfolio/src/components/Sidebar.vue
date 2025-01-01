@@ -28,7 +28,7 @@ export default {
   methods: {
     getRoleFromUrl() {
       const path = window.location.pathname;
-      const segments = path.split('/');
+      const segments = path.split('/#/');
       const roleParam = segments[1]; // Get the segment between the first and last slash
       if (roleParam === 'b') {
         return 'BACKEND DEVELOPER';
