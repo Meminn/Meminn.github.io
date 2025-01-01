@@ -19,7 +19,7 @@ import profilePhoto from '@/assets/photo.jpg';
 export default {
   data() {
     return {
-      name: "Mehmet Emin Bayrak 1",
+      name: "Mehmet Emin Bayrak 3",
       profilePhoto,
       email: "meminbayrak55@gmail.com",
       role: this.getRoleFromUrl(),
@@ -43,7 +43,7 @@ export default {
       } else if (roleParam === 'a') {
         return 'ANDROID DEVELOPER';
       } else {
-        return segments;
+        return path;
       }
     },
   },
