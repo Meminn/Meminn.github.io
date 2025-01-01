@@ -3,60 +3,44 @@
     <img :src="profilePhoto" alt="Profile Photo" class="photo"/>
     <h1>{{ name }}</h1>
     <h2>{{ role }}</h2>
-    <div v-if="basePath === '/ds'">
-      <!-- Dynamic content for /ds -->
-      <p>DATA SCIENTIST</p>
-    </div>
-    <div v-else-if="basePath === '/b'">
-      <!-- Dynamic content for /b -->
-      <p>BACKEND ENGINEER</p>
-
-    </div>
     <div class="contact-info">
       <h2>Contact Info</h2>
       <p><font-awesome-icon icon="phone" /> (+90) 505 720 81 34</p>
       <p><font-awesome-icon icon="envelope" /> <a :href="`mailto:${email}`">{{ email }}</a></p>
       <p><font-awesome-icon :icon="['fab', 'linkedin']" /> <a href="https://linkedin.com/in/mehmet-eminbayrak" target="_blank">linkedin.com/in/mehmet-eminbayrak</a></p>
-      <p><font-awesome-icon :icon="['fab', 'github']" />   <a href="https://github.com/Meminn" target="_blank">github.com/Meminn</a></p>  
+      <p><font-awesome-icon :icon="['fab', 'github']" /> <a href="https://github.com/Meminn" target="_blank">github.com/Meminn</a></p>
     </div>
   </aside>
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
 import profilePhoto from '@/assets/photo.jpg';
 
-export default {
-  data() {
-    return {
-      name: "Mehmet Emin Bayrak 3",
-      profilePhoto,
-      email: "meminbayrak55@gmail.com",
-      role: this.getRoleFromUrl(),
-    };
-  },
-  methods: {
-    getRoleFromUrl() {
-      const path = window.location.pathname;
-      const segments = path.split('/');
-      const roleParam = segments[2]; // Get the segment between the first and last slash
-      if (roleParam === 'b') {
-        return 'BACKEND DEVELOPER';
-      } else if (roleParam === 'ds') {
-        return 'DATA SCIENTIST';
-      } else if (roleParam === 'de') {
-        return 'DATA ENGINEER';
-      } else if (roleParam === 'fs') {
-        return 'FULL-STACK DEVELOPER'; 
-      } else if (roleParam === 'fe') {
-        return 'FRONTEND DEVELOPER'; 
-      } else if (roleParam === 'a') {
-        return 'ANDROID DEVELOPER';
-      } else {
-        return path;
-      }
-    },
-  },
-};
+const route = useRoute();
+
+const name = "Mehmet Emin Bayrak";
+const email = "meminbayrak55@gmail.com";
+
+const role = computed(() => {
+  const roleParam = route.path.split('/')[1]; // Get the second segment of the path
+  if (roleParam === 'b') {
+    return 'BACKEND DEVELOPER';
+  } else if (roleParam === 'ds') {
+    return 'DATA SCIENTIST';
+  } else if (roleParam === 'de') {
+    return 'DATA ENGINEER';
+  } else if (roleParam === 'fs') {
+    return 'FULL-STACK DEVELOPER'; 
+  } else if (roleParam === 'fe') {
+    return 'FRONTEND DEVELOPER'; 
+  } else if (roleParam === 'a') {
+    return 'ANDROID DEVELOPER';
+  } else {
+    return 'UNKNOWN ROLE';
+  }
+});
 </script>
 
 <style>

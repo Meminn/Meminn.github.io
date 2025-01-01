@@ -15,24 +15,26 @@ const basePath = computed(() => {
 
 <template>
   <div class="layout">
-    <Sidebar class="sidebar" :base-path="basePath" />
-    <div class="main-content">
+    <Sidebar class="sidebar" />
+    <div class="content">  
       <nav class="topbar">
         <!-- Use dynamic basePath for navigation -->
         <RouterLink :to="basePath">About Me</RouterLink>
         <RouterLink :to="`${basePath}/projects`">Projects</RouterLink>
         <RouterLink :to="`${basePath}/contact`">Contact</RouterLink>
       </nav>
-      
-      <div class="content">
-        <RouterView />
-      </div>
+      <RouterView />
     </div>
   </div>
 </template>
 
 <style scoped>
-.main-content, .content {
+.layout {
+  display: flex;
+}
+
+.content {
+  padding: 75px;
   position: absolute;
   top: 0;
   left: 200px;
@@ -94,13 +96,6 @@ const basePath = computed(() => {
   .sidebar {
     top: 0px;
     align-items: center;
-  }
-
-  .main-content{
-    top: 75px;
-    left: 200px;
-    right: 0;
-    bottom: 0;
   }
 }
 </style>

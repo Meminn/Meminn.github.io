@@ -62,13 +62,15 @@ export default {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--vt-c-light-1);  
   border-radius: 10px;
   background-color: #2c2c2c;
   position: absolute;
+  align-items: center;
+  justify-content: center;
   top: 50%;
-  left: 37%;
-  transform: translate(-50%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%); 
 }
 
 .contact-form label {
