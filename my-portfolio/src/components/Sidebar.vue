@@ -38,7 +38,7 @@ const role = computed(() => {
   } else if (roleParam === 'a') {
     return 'ANDROID DEVELOPER';
   } else {
-    return 'UNKNOWN ROLE';
+    return 'DATA SCIENTIST';
   }
 });
 </script>
