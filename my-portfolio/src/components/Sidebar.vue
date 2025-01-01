@@ -43,7 +43,7 @@ export default {
       } else if (roleParam === 'a') {
         return 'ANDROID DEVELOPER';
       } else {
-        return roleParam;
+        return segments[2].toUpperCase(), segments[1].toUpperCase(), segments[0].toUpperCase();
       }
     },
   },
