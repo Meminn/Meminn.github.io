@@ -176,7 +176,6 @@ const resumeLink = computed(() => {
 
 <style scoped>
 main {
-  padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

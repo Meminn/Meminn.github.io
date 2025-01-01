@@ -49,7 +49,7 @@
     <h2>Education</h2>
     <ul>
       <li><strong>Sabanci University, Istanbul</strong>    
-      <li> B.Sc. in Computer Science and Engineering (100% Scholarship)</li>
+      <br> B.Sc. in Computer Science and Engineering (100% Scholarship)
         <ul>
           <li><i>September 2019 – June 2024</i></li>
           <li><strong>Minors:</strong> Business Analytics, Mind & Behavior</li>
