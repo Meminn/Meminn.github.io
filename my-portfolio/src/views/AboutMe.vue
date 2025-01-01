@@ -173,6 +173,10 @@ export default {
       this.aboutMe = androidDeveloper.aboutMe;
       this.objective = androidDeveloper.objective;
       this.technicalSkills = androidDeveloper.technicalSkills;
+    } else if (path.includes('/')) {
+      this.aboutMe = dataScientist.aboutMe;
+      this.objective = dataScientist.objective;
+      this.technicalSkills = dataScientist.technicalSkills;
     }
   }
 };
