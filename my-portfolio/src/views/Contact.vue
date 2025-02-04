@@ -1,16 +1,18 @@
 <template>
-  <form @submit.prevent="sendEmail" class="contact-form">
-    <label for="subject">Subject:</label>
-    <input type="text" id="subject" v-model="form.subject" required />
-    
-    <label for="email">Your Email:</label>
-    <input type="email" id="email" v-model="form.email" required />
-    
-    <label for="message">Message:</label>
-    <textarea id="message" v-model="form.message" required></textarea>
-    
-    <button type="submit">Send</button>
-  </form>
+  <div class="contact-container">
+    <form @submit.prevent="sendEmail" class="contact-form">
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" v-model="form.subject" required />
+      
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" v-model="form.email" required />
+      
+      <label for="message">Message:</label>
+      <textarea id="message" v-model="form.message" required></textarea>
+      
+      <button type="submit">Send</button>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -56,52 +58,70 @@ export default {
 };
 </script>
 
-
 <style scoped>
-.contact-form {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid var(--vt-c-light-1);  
-  border-radius: 10px;
-  background-color: #2c2c2c;
-  position: absolute;
-  align-items: center;
+.contact-container {
+  display: flex;
   justify-content: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
+  align-items: center;
+  min-height: calc(100vh - 95px); /* Topbar height'ı çıkardık */
+  padding: 20px;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border: 1px solid var(--vt-c-divider-dark-1);
+  border-radius: 10px;
+  background-color: var(--vt-c-black-soft);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form label {
-  color:#c9c9c9;
   display: block;
   margin-bottom: 8px;
+  color: var(--vt-c-text-dark-1);
   font-weight: bold;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 20px;
-  border: 1px solid #6c6c6c;
+  border: 1px solid var(--vt-c-divider-dark-2);
   border-radius: 5px;
-  background-color:#3f3f3f;
-  color:#c9c9c9;
+  background-color: var(--vt-c-black-mute);
+  color: var(--vt-c-text-dark-1);
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
 }
 
 .contact-form button {
   display: inline-block;
-  padding: 10px 20px;
-  color: #c9c9c9;
-  background-color: #191919;
-  border: #ccc;
+  padding: 12px 24px;
+  background-color: var(--vt-c-black);
+  color: var(--vt-c-text-dark-1);
+  border: 1px solid var(--vt-c-divider-dark-1);
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
 .contact-form button:hover {
-  background-color: #404040;
+  background-color: var(--vt-c-black-mute);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 20px;
+    margin: 10px;
+  }
 }
 </style>
