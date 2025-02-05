@@ -325,3 +325,20 @@ a:hover {
     margin-top: 60px;
   }
 }
+
+/* Update the resume link paths to match the new public directory structure */
+.resume a[download] {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--vt-c-black);
+  color: var(--vt-c-text-dark-1);
+  border: 1px solid var(--vt-c-divider-dark-1);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resume a[download]:hover {
+  background-color: var(--vt-c-black-mute);
+  transform: translateY(-1px);
+}

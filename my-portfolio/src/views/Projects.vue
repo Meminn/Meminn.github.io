@@ -139,17 +139,19 @@ const projects = computed(() => {
 
 const resumeLink = computed(() => {
   if (route.path.includes('/b')) {
-    return '/assets/Mehmet Emin Bayrak CV Backend Developer.pdf';
+    return '/resumes/Mehmet Emin Bayrak CV Backend Developer.pdf';
   } else if (route.path.includes('/ds')) {
-    return '/assets/Mehmet Emin Bayrak CV Data Scientist.pdf';
+    return '/resumes/Mehmet Emin Bayrak CV Data Scientist.pdf';
   } else if (route.path.includes('/fe')) {
-    return '/assets/Mehmet Emin Bayrak CV Frontend Developer.pdf';
+    return '/resumes/Mehmet Emin Bayrak CV Frontend Developer.pdf';
   } else if (route.path.includes('/fs')) {
-    return '/assets/Mehmet Emin Bayrak CV Full-Stack Developer.pdf';
+    return '/resumes/Mehmet Emin Bayrak CV Full-Stack Developer.pdf';
   } else if (route.path.includes('/de')) {
-    return '/assets/Mehmet Emin Bayrak CV Data Engineer.pdf';
+    return '/resumes/Mehmet Emin Bayrak CV Data Engineer.pdf';
+  } else if (route.path.includes('/a')) {
+    return '/resumes/Mehmet Emin Bayrak CV Android Developer.pdf';
   } else {
-    return '/assets/Mehmet Emin Bayrak CV.pdf';
+    return '/resumes/Mehmet Emin Bayrak CV Data Scientist.pdf';
   }
 });
 </script>

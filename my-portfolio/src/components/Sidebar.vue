@@ -23,9 +23,9 @@
 <script setup>
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
-import profilePhoto from '@/assets/photo.jpg';
 
 const route = useRoute();
+const profilePhoto = '/assets/photo.jpg';  // Updated path
 
 const name = "Mehmet Emin Bayrak";
 const email = "meminbayrak55@gmail.com";
