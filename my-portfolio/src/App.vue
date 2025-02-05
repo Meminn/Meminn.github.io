@@ -10,6 +10,12 @@ const toggleSidebar = () => {
   isSidebarOpen.value = !isSidebarOpen.value;
 };
 
+const closeSidebar = () => {
+  if (isSidebarOpen.value) {
+    isSidebarOpen.value = false;
+  }
+};
+
 // Extract the dynamic role base path (e.g., "/b" or "/ds")
 const basePath = computed(() => {
   const pathSegment = route.path.split('/')[1];
@@ -28,7 +34,7 @@ const basePath = computed(() => {
     @close="isSidebarOpen = false"
   />
   
-  <div class="content">  
+  <div class="content" @click="closeSidebar">  
     <nav class="topbar">
       <RouterLink :to="basePath">About Me</RouterLink>
       <RouterLink :to="`${basePath}/projects`">Projects</RouterLink>
