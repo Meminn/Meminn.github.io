@@ -60,56 +60,55 @@ const role = computed(() => {
   gap: 30px;
 }
 **/
-.profile-section {
+/* .profile-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   width: 100%;
-}
+} */
 
-.photo {
+/* .photo {
   border-radius: 50%;
   width: 175px;
   height: 175px;
-}
+} */
 
-h1 {
+/* h1 {
   font-weight: bold;
   font-size: 1.6rem;
   margin-top: 10px;
   color: var(--vt-c-text-dark-1);
-}
+} */
 
-h2 {
+/* h2 {
   font-size: 1.2rem;
   color: var(--vt-c-text-dark-2);
-  
-} 
+} */
 
-.contact-info {
+/* .contact-info {
   margin-top: 20px;
-}
+} */
 
-.contact-info p {
+/* .contact-info p {
   margin: 15px 0;
-}
+} */
 
-.contact-info a {
+/* .contact-info a {
   text-decoration: none;
-}
+} */
 
-.contact-info a:hover {
+/* .contact-info a:hover {
   text-decoration: underline;
-}
+} */
 
-.contact-info font-awesome-icon {
+/* .contact-info font-awesome-icon {
   margin-right: 10px;
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .sidebar-content {
     margin-top: 60px;
   }
-}
+} */
 </style>

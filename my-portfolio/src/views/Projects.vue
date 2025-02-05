@@ -181,39 +181,20 @@ main {
   align-items: flex-start;
   width: 70%;
   margin: 0 auto;
-}
+} 
 
 h1 {
   margin-bottom: 20px;
   font-size: 2em;
-}
-
-.resume {
-  margin-top: 20px;
-  margin-bottom: 50px;
-  justify-content: left;
-}
-
-.project_title {
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 1px solid var(--vt-c-black-soft);
-  border-radius: 8px;
-  background-color: var(--vt-c-black-soft);
-}
+} 
 
 h2 {
-  margin: 0 0 10px 0;
+  margin: 0 10px 10px 0;
   font-size: 1.5em;
-}
+} 
 
 p {
   color: var(--vt-c-text-dark-2);
-  margin: 5px 0;
-}
-
-.description-list {
-  list-style-type: disc;
-  padding-left: 20px;
-}
+  margin: 15px 10px 10px 0;
+} 
 </style>

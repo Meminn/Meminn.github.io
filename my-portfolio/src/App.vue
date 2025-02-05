@@ -47,7 +47,7 @@ const basePath = computed(() => {
 </template>
 
 <style scoped>
-.sidebar-toggle {
+/* .sidebar-toggle {
   display: none;
   position: fixed;
   top: 20px;
@@ -61,26 +61,26 @@ const basePath = computed(() => {
   border-radius: 5px;
   width: 40px;
   height: 40px;
-}
+} */
 
-.content {
+/* .content {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 400px; /* Sidebar genişliği */
+  left: 400px;
   min-height: 100vh;
   box-sizing: border-box;
-}
+} */
 
-.main-content {
+/* .main-content {
   padding: 95px 40px 20px;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-}
+} */
 
-.sidebar {
+/* .sidebar {
   position: fixed;
   top: 0;
   left: 0;
@@ -93,9 +93,9 @@ const basePath = computed(() => {
   z-index: 100;
   background-color: var(--vt-c-black-soft);
   transition: transform 0.3s ease;
-}
+} */
 
-.topbar {
+/* .topbar {
   width: 100%;
   font-size: 18px;
   height: 75px;
@@ -108,27 +108,27 @@ const basePath = computed(() => {
   right: 0;
   background-color: var(--vt-c-black);
   z-index: 10;
-}
+} */
 
-.topbar a.router-link-exact-active {
+/* .topbar a.router-link-exact-active {
   color: var(--color-text);
-}
+} */
 
-.topbar a.router-link-exact-active:hover {
+/* .topbar a.router-link-exact-active:hover {
   background-color: transparent;
-}
+} */
 
-.topbar a {
+/* .topbar a {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-text);
-}
+} */
 
-.topbar a:first-of-type {
+/* .topbar a:first-of-type {
   border: 0;
-}
+} */
 
-@media (max-width: 1154px) {
+/* @media (max-width: 1154px) {
   .sidebar-toggle {
     display: flex;
     align-items: center;
@@ -156,5 +156,5 @@ const basePath = computed(() => {
     width: 100%;
     padding-left: 60px;
   }
-}
+} */
 </style>

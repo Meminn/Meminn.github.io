@@ -166,6 +166,24 @@ a:hover {
   width: 70%;
   margin: 0 auto;
 }
+.about ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 10px;
+} 
+
+.about li {
+  margin-bottom: 10px;
+}
+
+.about a {
+  text-decoration: none;
+}     
+
+.about a:hover {
+  text-decoration: underline;
+} 
+
 
 /* Projects Page */
 .project_title {

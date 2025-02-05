@@ -183,47 +183,47 @@ export default {
 </script>
 
 <style scoped>
-.about {
+/* .about {
   padding: 0px;
   display: flex;
   flex-direction: column;
   align-items: left;
   width: 70%;
   margin: 0 auto;
-}
+} */
 
 h1 {
   color:var(--vt-c-text-dark-1);
   margin-bottom: 20px;
   font-size: 2em;
-}
-h2 {
+} 
+ h2 {
   color: var(--vt-c-text-dark-1);
   font-size: 1.5em;
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 10px;
-}
+} 
 
-strong {
+/* strong {
   font-weight: bold;
-}
+} */
 
-ul {
+/* ul {
   list-style-type: none;
   padding: 0;
   margin-bottom: 10px;
-}
+} */
 
-li {
+/* li {
   margin-bottom: 10px;
-}
+} */
 
-a {
+/* a {
   text-decoration: none;
-}
+} */
 
-a:hover {
+/* a:hover {
   text-decoration: underline;
-}
+} */
 </style>
