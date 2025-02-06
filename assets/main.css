@@ -330,15 +330,33 @@ a:hover {
 .resume a[download] {
   display: inline-block;
   padding: 12px 24px;
-  background-color: var(--vt-c-black);
-  color: var(--vt-c-text-dark-1);
-  border: 1px solid var(--vt-c-divider-dark-1);
-  border-radius: 5px;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .resume a[download]:hover {
-  background-color: var(--vt-c-black-mute);
+  background-color: var(--color-background-mute);
+  transform: translateY(-1px);
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-background-soft);
   transform: translateY(-1px);
 }
