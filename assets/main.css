@@ -1,5 +1,5 @@
 @import './base.css';
-
+/* TODO: Separate dark and light theme css files */
 /* General App Layout */
 #app {
   max-width: 1280px;
@@ -62,7 +62,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   z-index: 100;
-  background-color: var(--vt-c-black-soft);
+  background-color: var(--color-background-soft);
   transition: transform 0.3s ease;
 }
 
@@ -90,7 +90,7 @@ a:hover {
   left: 400px;
   min-height: 100vh;
   box-sizing: border-box;
-  cursor: pointer;
+  cursor: default;
 }
 
 .main-content {
@@ -112,7 +112,7 @@ a:hover {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: var(--vt-c-black);
+  background-color: var(--color-background-soft);
   z-index: 10;
 }
 
@@ -189,9 +189,9 @@ a:hover {
 .project_title {
   margin-bottom: 20px;
   padding: 20px;
-  border: 1px solid var(--vt-c-black-soft);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
-  background-color: var(--vt-c-black-soft);
+  background-color: var(--color-background-soft);
 }
 
 .description-list {
@@ -218,9 +218,9 @@ a:hover {
   width: 100%;
   max-width: 600px;
   padding: 40px;
-  border: 1px solid var(--vt-c-divider-dark-1);
+  border: 1px solid var(--color-border);
   border-radius: 10px;
-  background-color: var(--vt-c-black-soft);
+  background-color: var(--color-background-soft);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -236,10 +236,10 @@ a:hover {
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
-  border: 1px solid var(--vt-c-divider-dark-2);
+  border: 1px solid var(--color-border);
   border-radius: 5px;
-  background-color: var(--vt-c-black-mute);
-  color: var(--vt-c-text-dark-1);
+  background-color: var(--color-background-mute);
+  color: var(--color-text);
   font-size: 16px;
 }
 
@@ -251,9 +251,9 @@ a:hover {
 .contact-form button {
   display: inline-block;
   padding: 12px 24px;
-  background-color: var(--vt-c-black);
-  color: var(--vt-c-text-dark-1);
-  border: 1px solid var(--vt-c-divider-dark-1);
+  background-color: var(--color-background-soft);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
@@ -261,7 +261,7 @@ a:hover {
 }
 
 .contact-form button:hover {
-  background-color: var(--vt-c-black-mute);
+  background-color: var(--color-background-mute);
   transform: translateY(-1px);
 }
 
