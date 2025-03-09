@@ -18,18 +18,19 @@ const backendProjects = [
       'Built a PHP and MySQL-based movie database web application using XAMPP.'
     ],
     technologies: ['PHP', 'MySQL', 'XAMPP']
+  },
+  {
+    title: 'Moodvice - Movie Recommendation Web App',
+    description: [
+      'Developed a movie recommendation web app using Next.js, TypeScript, and Tailwind CSS.',
+      'Utilized the The Movie Database (TMDb) API for movie data.',
+      'Sentiment analysis (NLP) of prompt using the sentiment library.',
+    ],
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'The Movie Database API', 'Sentiment Library']
   }
 ];
 
 const frontendProjects = [
-  {
-    title: 'Portfolio Website',
-    description: [
-      'Developed a responsive portfolio website using Vue.js and Tailwind CSS.',
-      'Implemented routing using Vue Router and state management using Vuex.'
-    ],
-    technologies: ['Vue.js', 'Tailwind CSS', 'Vue Router', 'Vuex']
-  },
   {
     title: 'Vinylbox (Online Store Webpage)',
     description: [
@@ -39,6 +40,24 @@ const frontendProjects = [
     ],
     technologies: ['React', 'Java Spring Boot', 'PostgreSQL', 'Bootstrap', 'Jira', 'Bitbucket']
   },
+  {
+    title: 'Moodvice - Movie Recommendation Web App',
+    description: [
+      'Developed a movie recommendation web app using Next.js, TypeScript, and Tailwind CSS.',
+      'Utilized the The Movie Database (TMDb) API for movie data.',
+      'Sentiment analysis (NLP) of prompt using the sentiment library.',
+    ],
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'The Movie Database API', 'Sentiment Library']
+  },
+  {
+    title: 'Portfolio Website',
+    description: [
+      'Developed a responsive portfolio website using Vue.js and Tailwind CSS.',
+      'Implemented routing using Vue Router and state management using Vuex.'
+    ],
+    technologies: ['Vue.js', 'Tailwind CSS', 'Vue Router', 'Vuex']
+  },
+  
   {
     title: 'MovieDB',
     description: [
@@ -64,7 +83,16 @@ const dataEngineerProjects = [
       'Built a PHP and MySQL-based movie database web application using XAMPP.'
     ],
     technologies: ['PHP', 'MySQL', 'XAMPP']
-  }
+  },
+  {
+    title: 'KoçFinans Predicting Probability of Default for Car Loan Applications',
+    description: [
+      'Created a probability of default model for predicting car loan application results.',
+      'Utilized XGBoost and LightGBM for modeling.',
+      'Implemented SHAP, Lime, and Counterfactual explanation methods for model interpretation.'
+    ],
+    technologies: ['XGBoost', 'LightGBM', 'SHAP', 'Lime', 'Counterfactual']
+  },
 ];
 
 const fullStackEngineerProjects = [
@@ -78,12 +106,52 @@ const fullStackEngineerProjects = [
     technologies: ['React', 'Java Spring Boot', 'PostgreSQL', 'Bootstrap', 'Jira', 'Bitbucket']
   },
   {
+    title: 'Moodvice - Movie Recommendation Web App',
+    description: [
+      'Developed a movie recommendation web app using Next.js, TypeScript, and Tailwind CSS.',
+      'Utilized the The Movie Database (TMDb) API for movie data.',
+      'Sentiment analysis (NLP) of prompt using the sentiment library.',
+    ],
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'The Movie Database API', 'Sentiment Library']
+  },
+  {
     title: 'MovieDB',
     description: [
       'Built a PHP and MySQL-based movie database web application using XAMPP.'
     ],
     technologies: ['PHP', 'MySQL', 'XAMPP']
-  }
+  },
+  {
+    title: 'Portfolio Website',
+    description: [
+      'Developed a responsive portfolio website using Vue.js and Tailwind CSS.',
+      'Implemented routing using Vue Router and state management using Vuex.'
+    ],
+    technologies: ['Vue.js', 'Tailwind CSS', 'Vue Router', 'Vuex']
+  },
+  {
+    title: 'KoçFinans Predicting Probability of Default for Car Loan Applications',
+    description: [
+      'Created a probability of default model for predicting car loan application results.',
+      'Utilized XGBoost and LightGBM for modeling.',
+      'Implemented SHAP, Lime, and Counterfactual explanation methods for model interpretation.'
+    ],
+    technologies: ['XGBoost', 'LightGBM', 'SHAP', 'Lime', 'Counterfactual']
+  },
+  {
+    title: 'Twitter Bot User & Political Tweet Classification',
+    description: [
+      'Developed models to classify Twitter bot accounts and political tweets using logistic regression, decision trees, and neural networks.'
+    ],
+    technologies: ['Logistic Regression', 'Decision Trees', 'Neural Networks']
+  },
+  {
+    title: 'Dogecoin Prediction',
+    description: [
+      'Analyzed historical Dogecoin data and predicted future closing values using linear regression and neural network regression methods.'
+    ],
+    technologies: ['Linear Regression', 'Neural Network Regression']
+  },
 ];
 
 const dataScienceProjects = [
